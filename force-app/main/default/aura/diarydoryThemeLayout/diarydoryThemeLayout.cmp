@@ -1,6 +1,10 @@
 <aura:component implements="forceCommunity:themeLayout">
-    <div class="slds-grid">
-        <div class="slds-col content">
+    <aura:attribute name="sidePane" type="Aura.Component[]" required="false"/>
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col slds-size_1-of-6">
+            {!v.sidePane}
+        </div>
+        <div class="slds-col slds-size_5-of-6">
             {!v.body}
         </div>
     </div>

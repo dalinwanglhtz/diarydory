@@ -1,2 +1,4 @@
 .THIS {
+    max-width: 70%;
+    margin: auto; /* move everything in the middle */
 }
