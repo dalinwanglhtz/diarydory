@@ -2,15 +2,23 @@
     <aura:attribute name="sidePane" type="Aura.Component[]" required="false"/>
     <aura:attribute name="topPane" type="Aura.Component[]" required="false"/>
     <aura:attribute name="mainTextArea" type="Aura.Component[]" required="false"/>
-    <div>
-        {!v.topPane}
+    <aura:attribute name="bottomPane" type="Aura.Component[]" required="false"/>
+    <div class="slds-grid">
+        <div class="slds-col slds-size_full">
+            {!v.topPane}
+        </div>
     </div>
-    <div class="slds-grid slds-gutters">
-        <div class="slds-col slds-size_1-of-6">
+    <div class="slds-grid">
+        <div class="slds-col slds-size_1-of-5">
             {!v.sidePane}
         </div>
-        <div class="slds-col slds-size_5-of-6">
+        <div class="slds-col slds-size_4-of-5">
             {!v.mainTextArea}
+        </div>
+    </div>
+    <div class="slds-grid">
+        <div class="slds-col slds-size_full">
+            {!v.bottomPane}
         </div>
     </div>
 </aura:component>	
