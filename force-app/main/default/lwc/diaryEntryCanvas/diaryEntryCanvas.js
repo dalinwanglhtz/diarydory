@@ -9,6 +9,17 @@ export default class DiaryEntryCanvas extends LightningElement {
     handleClick() {
         let value = this.template.querySelector('textarea').value.replace(/<([^>]+)>/ig, '');
 
+        if(value == null || value == '') {
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title: 'Error',
+                    message: 'Please enter something before save.',
+                    variant: 'error'
+                })
+            )
+            return;
+        }
+
         saveDiaryEntry({entryData:value})
         .then(result => {
             const toastEvent = new ShowToastEvent({

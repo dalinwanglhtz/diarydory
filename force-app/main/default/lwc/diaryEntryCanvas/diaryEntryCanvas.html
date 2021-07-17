@@ -2,8 +2,9 @@
     <form>
         <div>
             <textarea rows=10 class="slds-textarea"></textarea>
+            <lightning-button variant="brand" label="Save" onclick={handleClick}></lightning-button>
+            &nbsp;
+            <lightning-button variant="brand" label="Clear" onclick={handleClear}></lightning-button>
         </div>
-        <lightning-button variant="brand" label="Save" onclick={handleClick}></lightning-button>
-        <lightning-button variant="brand" label="Clear" onclick={handleClear}></lightning-button>
     </form>
 </template>
