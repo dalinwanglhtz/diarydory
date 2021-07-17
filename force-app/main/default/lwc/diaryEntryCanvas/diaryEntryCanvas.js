@@ -7,7 +7,7 @@ export default class DiaryEntryCanvas extends LightningElement {
     @track errorMessage;
 
     handleClick() {
-        let value = this.template.querySelector('lightning-textarea').value.replace(/<([^>]+)>/ig, '');
+        let value = this.template.querySelector('textarea').value.replace(/<([^>]+)>/ig, '');
 
         saveDiaryEntry({entryData:value})
         .then(result => {
@@ -27,6 +27,6 @@ export default class DiaryEntryCanvas extends LightningElement {
 
     handleClear() {
         this.template.querySelector('form').reset();
-       // this.template.querySelector('lightning-textarea').value = null;
+        this.template.querySelector('textarea').value = null;
     }
 }
