@@ -34,9 +34,15 @@ export default class DiaryEntryCanvas extends LightningElement {
             this.errorMessage = error.body.message;
             console.log('Error: ', this.errorMessage);
         });
+
+        this.clearData();
     }
 
     handleClear() {
+        this.clearData();
+    }
+
+    clearData() {
         this.template.querySelector('form').reset();
         this.template.querySelector('textarea').value = null;
     }
