@@ -1,7 +1,8 @@
-<aura:component controller="getIpCalloutController" implements="forceCommunity:availableForAllPageTypes" access="global">
-    <!-- Currently not used as it only returns Salesforce server address -->
-        <!-- <aura:attribute name="responseTextValue" type="String" default="hello" />
-        <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> -->
-        <!-- {!v.responseTextValue} -->
-    <iframe src="https://australiacom-dev-ed--c.visualforce.com/apex/getIpPage" width="100%" height="20px"/>
+<aura:component implements="forceCommunity:availableForAllPageTypes, flexipage:availableForRecordHome" access="global">
+    <aura:attribute name="vfHost" type="String"
+        default="yourdomain-dev-ed--c.na35.visual.force.com"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <iframe aura:id="vfFrame" src="{!'/apex/getIpPage'}" />
 </aura:component>

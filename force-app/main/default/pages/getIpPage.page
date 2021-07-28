@@ -1,10 +1,22 @@
-<apex:page showHeader="false" sidebar="false" controller="IPAddressController" action="{!getUserIPAddress}">
+<apex:page sidebar="false" controller="IPAddressController" action="{!getUserIPAddress}">
+	<!-- <button onclick="sendToLC()">Send to LC</button> -->
 	<script>
-    	setTimeout(function(){
-        	var message = '{!ip}';
-        	parent.postMessage(message, window.top.location.origin);         
-     	}, 3000);
+		// For testing inside the org
+		// function sendToLC() {
+		// 	var message = '{!ip}';
+		// 	var lexOrigin = 'https://australiacom-dev-ed.lightning.force.com/';
+		// 	console.log('location: origin');
+		// 	parent.postMessage(message, lexOrigin);         
+		// }
+
+		setTimeout(() => {
+			var message = '{!ip}';
+			var lexOrigin = 'https://spinosaurus-developer-edition.ap24.force.com/diaryDory/s/';
+			console.log('location: origin');
+			parent.postMessage(message, lexOrigin);
+		}, 500);
  	</script>
+
  	<apex:form >
      	{!ip}
  	</apex:form>
