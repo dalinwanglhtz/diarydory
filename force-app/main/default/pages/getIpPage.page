@@ -11,7 +11,7 @@
 
 		setTimeout(() => {
 			var message = '{!ip}';
-			var lexOrigin = 'https://spinosaurus-developer-edition.ap24.force.com/diaryDory/s/';
+			var lexOrigin = 'https://spinosaurus-developer-edition.ap24.force.com/';
 			console.log('location: origin');
 			parent.postMessage(message, lexOrigin);
 		}, 500);

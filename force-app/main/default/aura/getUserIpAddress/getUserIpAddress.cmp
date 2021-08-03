@@ -4,5 +4,5 @@
 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 
-    <iframe aura:id="vfFrame" src="{!'/apex/getIpPage'}" />
+    <iframe aura:id="vfFrame" src="{!'https://australiacom-dev-ed--c.visualforce.com/apex/getIpPage'}" width="100%"/>
 </aura:component>
