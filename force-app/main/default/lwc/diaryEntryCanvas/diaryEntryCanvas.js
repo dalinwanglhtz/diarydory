@@ -1,10 +1,40 @@
-import { LightningElement, track } from 'lwc';
+import { LightningElement, track, wire } from 'lwc';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 import saveDiaryEntry from '@salesforce/apex/DiaryEntryController.saveDiaryEntry';
+import {
+    subscribe,
+    unsubscribe,
+    APPLICATION_SCOPE,
+    MessageContext
+} from 'lightning/messageService';
+import interDomChannel from '@salesforce/messageChannel/InterDomMessageChannel__c';
 
 export default class DiaryEntryCanvas extends LightningElement {
+    subscription = null;
 
     @track errorMessage;
+
+    @wire(MessageContext)
+    messageContext;
+
+    subscribeToMessageChannel() {
+        if (!this.subscription) {
+            this.subscription = subscribe(
+                this.messageContext,
+                interDomChannel,
+                (message) => this.handleMessage(message),
+                { scope: APPLICATION_SCOPE }
+            );
+        }
+    }
+
+    handleMessage(message) {
+        console.log('Received message: ', message.IpAddress);
+    }
+
+    connectedCallback() {
+        this.subscribeToMessageChannel();
+    }
 
     handleClick() {
         let value = this.template.querySelector('textarea').value.replace(/<([^>]+)>/ig, '');

@@ -1,6 +1,8 @@
 <aura:component implements="forceCommunity:availableForAllPageTypes, flexipage:availableForRecordHome" access="global">
     <aura:attribute name="vfHost" type="String"
         default="yourdomain-dev-ed--c.na35.visual.force.com"/>
+    <lightning:messageChannel type="InterDomMessageChannel__c"
+        aura:id="interDomMessageChannel"/>
 
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 

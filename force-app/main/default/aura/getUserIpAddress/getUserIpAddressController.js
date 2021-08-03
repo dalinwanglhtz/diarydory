@@ -10,6 +10,12 @@
 				console.log('Event data: ', event.data);
                 return;
             }
+
+            var payload = {
+                IpAddress: event.data
+            };
+            component.find("interDomMessageChannel").publish(payload);
+
             // Handle the message
             console.log('Event data: ', event.data);
         }), false);
