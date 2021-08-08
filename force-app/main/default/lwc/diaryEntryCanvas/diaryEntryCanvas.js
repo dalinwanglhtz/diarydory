@@ -11,6 +11,7 @@ import interDomChannel from '@salesforce/messageChannel/InterDomMessageChannel__
 
 export default class DiaryEntryCanvas extends LightningElement {
     subscription = null;
+    currIp;
 
     @track errorMessage;
 
@@ -29,6 +30,7 @@ export default class DiaryEntryCanvas extends LightningElement {
     }
 
     handleMessage(message) {
+        this.currIp = message.IpAddress;
         console.log('Received message: ', message.IpAddress);
     }
 
