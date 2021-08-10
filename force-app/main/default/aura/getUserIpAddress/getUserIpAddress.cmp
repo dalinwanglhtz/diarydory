@@ -7,5 +7,5 @@
     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
 
     <!-- <iframe aura:id="vfFrame" src="{!'https://australiacom-dev-edc.visualforce.com/apex/getIpPage'}" width="100%"/> -->
-    <iframe aura:id="vfFrame" src="{!'/apex/getIpPage'}" width="100%"/>
+    <iframe aura:id="vfFrame" src="{!'/apex/getIpPage'}" style="position: absolute;width:0;height:0;border:0;"/>
 </aura:component>
