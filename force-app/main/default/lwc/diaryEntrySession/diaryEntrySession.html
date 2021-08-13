@@ -1,0 +1,23 @@
+<template>
+   <template if:true={loggedOut}>
+      <div class="slds-p-around_xx-small">
+         <lightning-layout>
+            <lightning-layout-item flexibility="auto" padding="small">
+               <div class="slds-p-vertical_xxx-small">
+                  <lightning-button variant="Brand" label="Login" onclick={handleClick}></lightning-button>
+               </div>
+            </lightning-layout-item>
+         </lightning-layout>
+      </div>
+   </template>
+   <template if:false={loggedOut}>
+      Logged In
+      <lightning-layout>
+         <lightning-layout-item flexibility="auto" padding="small">
+            <div class="slds-p-vertical_xxx-small">
+               <lightning-button variant="Brand" label="Logout" onclick={handleLogout}></lightning-button>
+            </div>
+         </lightning-layout-item>
+      </lightning-layout>
+   </template>
+</template>
