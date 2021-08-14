@@ -8,6 +8,7 @@ export default class DiaryEntrySession extends NavigationMixin(LightningElement)
     loggedOut = true;
     @track currUserName;
     @track error;
+    userId = USER_ID;
 
     @wire(getRecord, {
         recordId: USER_ID,

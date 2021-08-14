@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Diary Entries" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={diaryEntryList}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={diaryEntryList}
+                    columns={columns}
+                    onsave={handleSave}
+                    draft-values={draftValues}>
+                </lightning-datatable>
+            </template>
+            <template if:true={error}>
+                <!-- Handle Error -->
+            </template>
+        </div>
+    </lightning-card>
+</template>

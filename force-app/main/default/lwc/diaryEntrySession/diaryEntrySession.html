@@ -11,6 +11,7 @@
       </div>
    </template>
    <template if:false={loggedOut}>
+      <c-diary-entry-list userid={userId}></c-diary-entry-list>
       Logged In
       <lightning-layout>
          <lightning-layout-item flexibility="auto" padding="small">
