@@ -5,6 +5,7 @@ import {
     subscribe,
     unsubscribe,
     APPLICATION_SCOPE,
+    publish,
     MessageContext
 } from 'lightning/messageService';
 import interDomChannel from '@salesforce/messageChannel/InterDomMessageChannel__c';
@@ -61,6 +62,9 @@ export default class DiaryEntryCanvas extends LightningElement {
             });
             this.dispatchEvent(toastEvent);
             console.log('Result: ', result);
+
+            // Publish message
+            publish(this.messageContext, interDomChannel, { updated: 'true'});
         })
         .catch(error => {
             this.errorMessage = error.body.message;
