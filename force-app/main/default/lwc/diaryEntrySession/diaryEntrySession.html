@@ -11,14 +11,11 @@
       </div>
    </template>
    <template if:false={loggedOut}>
-      <c-diary-entry-list userid={userId}></c-diary-entry-list>
-      Logged In
-      <lightning-layout>
-         <lightning-layout-item flexibility="auto" padding="small">
-            <div class="slds-p-vertical_xxx-small">
-               <lightning-button variant="Brand" label="Logout" onclick={handleLogout}></lightning-button>
-            </div>
-         </lightning-layout-item>
-      </lightning-layout>
+      <lightning-card>
+         <p slot="title" style="font-family: Brush Script MT">
+            Hello {currUserName}
+         </p>
+         <lightning-button variant="Brand" slot="actions" label="Logout" onclick={handleLogout}></lightning-button>
+      </lightning-card>
    </template>
 </template>

@@ -1,18 +1,18 @@
-import { LightningElement, wire, api } from 'lwc';
+import { LightningElement, wire } from 'lwc';
 import { updateRecord } from 'lightning/uiRecordApi';
 import { refreshApex } from '@salesforce/apex';
+import USER_ID from '@salesforce/user/Id';
 import getDiaryEntryList from '@salesforce/apex/DiaryEntryController.getDiaryEntry';
 import CREATED_DATE_FIELD from '@salesforce/schema/Diary_Entry__c.CreatedDate';
 import DETAIL_FIELD from '@salesforce/schema/Diary_Entry__c.Detail__c';
 import ID_FIELD from '@salesforce/schema/Diary_Entry__c.Id';
 
 const COLS = [
-    { label: 'Created Date', fieldName: 'CreatedDate'},
     { label: 'Notes', fieldName: 'Detail__c', editable: true}
 ]
 
 export default class DiaryEntryList extends LightningElement {
-    @api userid;
+    userid = USER_ID;
     columns = COLS;
     diaryEntryList;
     wiredDiaryEntryList;
