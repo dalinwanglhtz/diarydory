@@ -1,7 +1,7 @@
 <template>
-    <lightning-card title="Diary Entries" icon-name="custom:custom63">
-        <div class="slds-m-around_medium">
-            <template if:true={diaryEntryList}>
+    <template if:true={diaryEntryList}>
+        <lightning-card title="Diary Entries" icon-name="custom:custom63">
+            <div class="slds-m-around_medium">
                 <div style="overflow-y:auto; max-height:200px">
                     <lightning-datatable
                         key-field="Id"
@@ -12,10 +12,10 @@
                         draft-values={draftValues}>
                     </lightning-datatable>
                 </div>
-            </template>
-            <template if:true={error}>
-                <!-- Handle Error -->
-            </template>
-        </div>
-    </lightning-card>
+                <template if:true={error}>
+                    <!-- Handle Error -->
+                </template>
+            </div>
+        </lightning-card>
+    </template>
 </template>
