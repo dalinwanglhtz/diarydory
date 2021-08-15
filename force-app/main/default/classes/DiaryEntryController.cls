@@ -1,11 +1,19 @@
 public class DiaryEntryController {
 
     @AuraEnabled
-    public static void saveDiaryEntry(String entryData) {
-        Diary_Entry__c de = new Diary_Entry__c();
-        de.Detail__c = entryData;
+    public static void saveDiaryEntry(String entryData, Id entryId) {
+        Diary_Entry__c de;
+        if(entryId != null) {
+            de = [SELECT Id, Detail__c  
+                  FROM Diary_Entry__c
+                  WHERE Id = :entryId];
+            de.Detail__c = entryData;
+        } else {
+            de = new Diary_Entry__c();
+            de.Detail__c = entryData;
+        }
         
-        insert de;
+        upsert de;
     }
 
     @AuraEnabled(cacheable=true)
@@ -20,5 +28,18 @@ public class DiaryEntryController {
         }
 
         return des;
+    }
+
+    @AuraEnabled
+    public static void deleteDiaryEntry(Id rowId){
+        try {
+            Diary_Entry__C de = [SELECT Id
+                                FROM Diary_Entry__c
+                                WHERE Id = :rowId
+                                LIMIT 1];
+            delete de;
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
     }
 }

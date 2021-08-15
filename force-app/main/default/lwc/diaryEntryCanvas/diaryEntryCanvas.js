@@ -3,9 +3,7 @@ import {ShowToastEvent} from 'lightning/platformShowToastEvent';
 import saveDiaryEntry from '@salesforce/apex/DiaryEntryController.saveDiaryEntry';
 import {
     subscribe,
-    unsubscribe,
     APPLICATION_SCOPE,
-    publish,
     MessageContext
 } from 'lightning/messageService';
 import interDomChannel from '@salesforce/messageChannel/InterDomMessageChannel__c';
@@ -13,6 +11,7 @@ import interDomChannel from '@salesforce/messageChannel/InterDomMessageChannel__
 export default class DiaryEntryCanvas extends LightningElement {
     subscription = null;
     currIp;
+    diaryEntryId;
 
     @track errorMessage;
 
@@ -33,6 +32,11 @@ export default class DiaryEntryCanvas extends LightningElement {
     handleMessage(message) {
         this.currIp = message.IpAddress;
         console.log('Received message: ', message.IpAddress);
+        if(message.rowData != null) {
+            console.log('Row data: ', message.rowData);
+            this.template.querySelector('textarea').value = message.rowData.Detail__c;
+            this.diaryEntryId = message.rowData.Id;
+        }
     }
 
     connectedCallback() {
@@ -53,7 +57,7 @@ export default class DiaryEntryCanvas extends LightningElement {
             return;
         }
 
-        saveDiaryEntry({entryData:value})
+        saveDiaryEntry({entryData:value, entryId: this.diaryEntryId})
         .then(result => {
             const toastEvent = new ShowToastEvent({
                 title: 'Success!',
@@ -62,16 +66,15 @@ export default class DiaryEntryCanvas extends LightningElement {
             });
             this.dispatchEvent(toastEvent);
             console.log('Result: ', result);
-
-            // Publish message
-            publish(this.messageContext, interDomChannel, { updated: 'true'});
+        })
+        .then(result => {
+            this.clearData();
+            location.reload();
         })
         .catch(error => {
             this.errorMessage = error.body.message;
             console.log('Error: ', this.errorMessage);
         });
-
-        this.clearData();
     }
 
     handleClear() {
