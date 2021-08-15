@@ -1,6 +1,7 @@
 <template>
     <template if:true={diaryEntryList}>
-        <lightning-card title="Diary Entries" icon-name="custom:custom63">
+        <lightning-card title="Diary Entries" icon-name="custom:custom57">
+            <lightning-button variant="brand-outline" slot="actions" label="Delete Selected" onclick={handleDeleteSelected}></lightning-button>
             <div class="slds-m-around_medium">
                 <div style="overflow-y:auto; max-height:200px">
                     <lightning-datatable

@@ -15,7 +15,7 @@ import {
 import interDomChannel from '@salesforce/messageChannel/InterDomMessageChannel__c';
 
 const actions = [
-    { label: 'Show Details', name: 'show_details'},
+    { label: 'Edit', name: 'edit'},
     { label: 'Delete', name: 'delete' }
 ];
 
@@ -75,7 +75,7 @@ export default class DiaryEntryList extends LightningElement {
         const row = event.detail.row;
         console.log('Selected row: ', row);
         switch (action.name) {
-            case 'show_details':
+            case 'edit':
                 publish(this.messageContext, interDomChannel, { rowData: row });
                 break;
             case 'delete':
@@ -83,5 +83,14 @@ export default class DiaryEntryList extends LightningElement {
                 location.reload();
                 break;
         }
+    }
+
+    handleDeleteSelected() {
+        let selectedRows = this.template.querySelector('lightning-datatable').getSelectedRows();
+        console.log('Rows selected: ', selectedRows);
+        selectedRows.forEach(element => {
+            deleteDiaryEntry({rowId: element.Id});
+        });
+        location.reload();
     }
 }
