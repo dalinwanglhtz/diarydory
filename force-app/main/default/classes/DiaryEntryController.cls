@@ -18,7 +18,7 @@ public class DiaryEntryController {
 
     @AuraEnabled(cacheable=true)
     public static LIst<Diary_Entry__c> getDiaryEntry(Id userId){
-        List<Diary_Entry__c> des = new List<Diary_Entry__c>();
+        List<Diary_Entry__c> des;
         try {
             des = [SELECT Id, Detail__c, CreatedDate
                    FROM Diary_Entry__c
