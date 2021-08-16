@@ -31,6 +31,7 @@ export default class DiaryEntryList extends LightningElement {
     wiredDiaryEntryList;
     draftValues = [];
     error;
+    isLoading = false;
 
     @wire(getDiaryEntryList, {userId: '$userid'})
     loadDiaryEntries(result) {
@@ -51,6 +52,7 @@ export default class DiaryEntryList extends LightningElement {
     messageContext;
 
     handleSave(event) {
+        this.isLoading = true;
         const fields = {};
         fields[ID_FIELD.fieldApiName] = event.detail.draftValues[0].Id;
         fields[CREATED_DATE_FIELD.fieldApiName] = event.detail.draftValues[0].CreatedDate;
@@ -61,12 +63,14 @@ export default class DiaryEntryList extends LightningElement {
         updateRecord(recordInput)
         .then(() => {
             console.log('Saved!');
+            this.isLoading = false;
             return refreshApex(this.wiredDiaryEntryList).then(() => {
                 this.draftValues = [];
             });
         })
         .catch(error => {
             this.error = error;
+            this.isLoading = false;
         })
     }
 
