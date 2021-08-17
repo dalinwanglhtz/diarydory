@@ -1,4 +1,7 @@
 .THIS {
     max-width: 70%;
     margin: auto; /* move everything in the middle */
+    background-image: url('/sfsites/c/resource/1629202600000/diaryEntryResources/background-image.jpg');
+    background-repeat: no-repeat;
+    background-size: 1920px 1200px;
 }
