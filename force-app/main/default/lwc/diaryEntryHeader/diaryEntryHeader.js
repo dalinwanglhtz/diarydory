@@ -6,11 +6,12 @@ export default class DiaryEntryHeader extends NavigationMixin(LightningElement) 
     diaryEntryLogo = DiaryEntryResources + '/diarydory-logo.png';
 
     handleHelp(event) {
-        this[NavigationMixin.Navigate]({
-            "type": "standard__webPage",
-            "attributes": {
-                "url": "/help"
-            },
-        });
+        // this[NavigationMixin.Navigate]({
+        //     "type": "comm__namedPage",
+        //     "attributes": {
+        //         "pageName": "help"
+        //     },
+        // });
+        location.replace('/s/help');
     }
 }
