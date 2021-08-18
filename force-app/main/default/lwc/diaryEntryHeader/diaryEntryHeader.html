@@ -1,5 +1,12 @@
 <template>
     <div class="slds-m-around_medium">
         <img src={diaryEntryLogo}>
+        <lightning-button-icon 
+            icon-name="utility:help" 
+            alternative-text="Help" 
+            class="slds-m-left_xx-small slds-float--right" 
+            title="Help"
+            onclick={handleHelp}>
+        </lightning-button-icon>
     </div>
 </template>
