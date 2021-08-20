@@ -14,4 +14,14 @@ export default class DiaryEntryHeader extends NavigationMixin(LightningElement) 
         // });
         location.replace('/s/help');
     }
+
+    handleHome(event) {
+        // this[NavigationMixin.Navigate]({
+        //     "type": "comm__namedPage",
+        //     "attributes": {
+        //         "pageName": "home"
+        //     },
+        // });
+        location.replace('/s/');
+    }
 }

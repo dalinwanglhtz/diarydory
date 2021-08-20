@@ -1,12 +1,26 @@
 <template>
-    <div class="slds-m-around_medium">
-        <img src={diaryEntryLogo}>
-        <lightning-button-icon 
-            icon-name="utility:help" 
-            alternative-text="Help" 
-            class="slds-m-left_xx-small slds-float_right" 
-            title="Help"
-            onclick={handleHelp}>
-        </lightning-button-icon>
-    </div>
+    <lightning-layout horizontal-align="spread">
+        <lightning-layout-item flexibility="auto">
+            <img src={diaryEntryLogo}>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="auto">
+            <h1>Welcome to DiaryDory</h1>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="auto">
+            <lightning-button-icon 
+                icon-name="utility:home" 
+                alternative-text="Home" 
+                class="slds-m-left_xx-small slds-float_right" 
+                title="Home"
+                onclick={handleHome}>
+            </lightning-button-icon>
+            <lightning-button-icon 
+                icon-name="utility:help" 
+                alternative-text="Help" 
+                class="slds-m-left_xx-small" 
+                title="Help"
+                onclick={handleHelp}>
+            </lightning-button-icon>
+        </lightning-layout-item>
+    </lightning-layout>
 </template>

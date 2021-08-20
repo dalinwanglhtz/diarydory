@@ -5,13 +5,12 @@ import { NavigationMixin } from 'lightning/navigation';
 export default class DiaryEntryHelp extends NavigationMixin(LightningElement) {
     helpVideoUrl = DiaryEntryResources + '/diaryDory-demo.mp4';
 
-    handleHome(event) {
-        // this[NavigationMixin.Navigate]({
-        //     "type": "comm__namedPage",
-        //     "attributes": {
-        //         "pageName": "home"
-        //     },
-        // });
-        location.replace('/s/');
-    }
+    // handleHome(event) {
+    //     this[NavigationMixin.Navigate]({
+    //         "type": "comm__namedPage",
+    //         "attributes": {
+    //             "pageName": "home"
+    //         },
+    //     });
+    // }
 }
