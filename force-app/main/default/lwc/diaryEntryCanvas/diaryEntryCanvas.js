@@ -1,5 +1,6 @@
 import { LightningElement, track, wire } from 'lwc';
 import {ShowToastEvent} from 'lightning/platformShowToastEvent';
+import USER_ID from '@salesforce/user/Id';
 import saveDiaryEntry from '@salesforce/apex/DiaryEntryController.saveDiaryEntry';
 import {
     subscribe,
@@ -12,6 +13,7 @@ export default class DiaryEntryCanvas extends LightningElement {
     subscription = null;
     currIp;
     diaryEntryId;
+    canvasDisabled = !(USER_ID != null);
 
     @track errorMessage;
 
