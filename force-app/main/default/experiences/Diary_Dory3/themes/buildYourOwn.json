@@ -1,0 +1,855 @@
+{
+  "activeBrandingSetId" : "9705aca8-88bf-475b-be0d-94fcf8e55db7",
+  "customCSS" : "",
+  "developerName" : "starter",
+  "id" : "99ce3faa-477b-418a-994f-4681ae0249c9",
+  "label" : "Build Your Own",
+  "layouts" : {
+    "74oN3mZtPaQR7wzLhnBOdVLwOZ4cZD" : "40801b2a-0634-4f9b-8084-e9f820ae9568",
+    "FV8tZ4hNXqkj49zEvQP0bcklwm7MCM" : "cc088f9b-c8e4-4805-8888-da616c6f5837",
+    "Inner" : "eb42233d-6fe2-4718-a509-2c434d3c292d",
+    "Login" : "c31ab034-d4b5-4b9b-9c5b-552442522588",
+    "ServiceNotAvailable" : "648b130f-63f1-4f18-8290-eff972aedfc7",
+    "TO62epBCSCrjjttK54xBZQV7guUM2f" : "6543fe02-6344-4960-99a1-9026a096e4fa",
+    "duGDszXezfYWkcQ3lZBuX2U9pXbwGP" : "34dd80e6-c412-4480-afad-58e1c6c408eb",
+    "gt2evJw4GBg5ESmX0OqeyDCosrWQQD" : "610cda7f-18ce-40e0-98f2-8c9f60e1b316"
+  },
+  "type" : "theme",
+  "views" : [ {
+    "componentAttributes" : { },
+    "componentName" : "c:diarydoryThemeLayout",
+    "id" : "c31ab034-d4b5-4b9b-9c5b-552442522588",
+    "label" : "Login",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryHeader",
+        "id" : "4d9815dd-86d5-49e5-bdb7-329ee3798e81",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "1e86f16d-02a5-40c3-aff5-c85a3703f508",
+      "regionName" : "header",
+      "type" : "region"
+    }, {
+      "id" : "204cb013-765d-4dd5-9d3c-4d37d4d58a05",
+      "regionName" : "content",
+      "type" : "region"
+    }, {
+      "id" : "0c36081c-2d96-42cd-9384-0c325774b4e6",
+      "regionName" : "footer",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "5e34564d-7328-4c1f-99d7-e6c7a77e1794",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "1ef1db1b-aae2-4007-80b3-1816f4d17a75",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "7f28d9e3-4ac7-4df1-995c-74eb48450d19",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "d70b628a-9f33-4f27-96c6-a3646ab4f10b",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "149f9b16-41d0-4f23-903d-c7768af161c7",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "d29c3985-be8a-4418-8083-c7b892e56887",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryDory",
+        "id" : "a85bcf56-8b39-468b-833c-036c3816ee2e",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "bb3e4ff9-e47e-4b09-906d-fd3d942ce1f5",
+      "regionName" : "sidePane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryHeader",
+        "id" : "59b65e07-ae28-4e32-8e3d-3d896c600213",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "77a91a87-4a93-40ed-b5c0-789c3100c83e",
+      "regionName" : "topPane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "forgotPasswordLabel" : "Forgot your password?",
+          "forgotPasswordUrl" : "/ForgotPassword",
+          "loginButtonLabel" : "Log in",
+          "passwordLabel" : "Password",
+          "selfRegisterLabel" : "Not a member?",
+          "selfRegisterUrl" : "/SelfRegister",
+          "startUrl" : "",
+          "usernameLabel" : "Username"
+        },
+        "componentName" : "salesforceIdentity:loginForm2",
+        "id" : "dc3bc25c-0190-4961-b20d-936b1f98a609",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "f078a303-ca9e-4678-90e1-0c232f409033",
+      "regionName" : "mainTextArea",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-family: georgia;\"><span class=\"ql-cursor\">﻿</span>© Copyright 2021, Dale Wang</span></p>"
+        },
+        "componentName" : "forceCommunity:richTextInline",
+        "id" : "14295cf3-a7b5-4367-ac20-29a34b5ea922",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "6905b672-607a-4c7e-b2a1-1d27863d22c1",
+      "regionName" : "bottomPane",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1440,
+      "isPageWidthFixed" : true
+    },
+    "componentName" : "siteforce:starterBody",
+    "id" : "eb42233d-6fe2-4718-a509-2c434d3c292d",
+    "label" : "Default",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "8c20a6b9-f874-413a-b048-1327fd1977d4",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "a622ec73-43bf-45f9-99d1-2974c2b3dcaf",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "3fa2b5f2-fe3b-4c74-a9f2-e9c4941fbf6d",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "9e377416-2ec5-4e32-b8d8-79767703fcae",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "4f193cd6-687b-4c64-80e1-efd3d2d4c437",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "339521ed-1f38-442c-af65-08f5a629ba3e",
+      "regionName" : "navBar",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : {
+      "fixedPageWidth" : 1170,
+      "headerBgColor" : "rgba(0, 0, 0, 0)",
+      "isHeaderPinned" : false,
+      "isHeroUnderHeader" : false,
+      "isPageWidthFixed" : true,
+      "showHeader" : true,
+      "showHero" : true
+    },
+    "componentName" : "siteforce:themeLayoutStarter",
+    "id" : "648b130f-63f1-4f18-8290-eff972aedfc7",
+    "label" : "ServiceNotAvailable",
+    "regions" : [ {
+      "id" : "26081b17-41e1-4f39-a039-48581fbf2afe",
+      "regionName" : "themeHeader",
+      "type" : "region"
+    }, {
+      "id" : "713333ae-b10d-4a24-a82e-7d981d61c804",
+      "regionName" : "themeFooter",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "c:diarydoryThemeLayout",
+    "id" : "6543fe02-6344-4960-99a1-9026a096e4fa",
+    "label" : "Diary Dory",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "386ed6de-f545-4a9e-96d4-9348e3054fc1",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "2822b3b8-376c-4f4b-8676-0ade6029f573",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "505c6c6a-9af0-45aa-b3d8-f4eab5448f0d",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "763d1ff0-880c-40e1-942f-aa0130ca9380",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "743330f8-0e3f-46df-a03f-20983ead1883",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "36d484b1-e96e-4049-8bb3-8cbea51bd7ce",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntrySession",
+        "id" : "8e1af1ec-31c6-4a32-83d0-db78de23c6ad",
+        "renditionMap" : { },
+        "type" : "component"
+      }, {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryList",
+        "id" : "22e6f4e1-bfec-4de0-91a0-94141d7ffe78",
+        "renditionMap" : { },
+        "type" : "component"
+      }, {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryDory",
+        "id" : "bb49e374-f7a7-4f49-ac89-9696766d08fa",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "5ab8f235-5a9a-4f02-ba9c-a77442df2d2e",
+      "regionName" : "sidePane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryHeader",
+        "id" : "4db4bf73-0194-4080-9999-8d6ebb39ebe9",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "31d89914-370d-486c-a805-808290a12dd3",
+      "regionName" : "topPane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryCanvas",
+        "id" : "3301d045-a440-4011-845c-3a204fa89682",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "165edcd9-c971-4850-bb43-88de6a623814",
+      "regionName" : "mainTextArea",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-family: georgia;\">© Copyright 2021, Dale Wang</span></p>"
+        },
+        "componentName" : "forceCommunity:richTextInline",
+        "id" : "2690ed03-19e7-407e-92df-0c4a21da5211",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "5039ce71-2667-463d-9ff3-5f8e411a917c",
+      "regionName" : "bottomPane",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "c:diarydoryThemeLayout",
+    "id" : "40801b2a-0634-4f9b-8084-e9f820ae9568",
+    "label" : "Diary Dory Pages",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "1bf58fd7-0307-41f2-bb10-5a60bf480b2b",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "a77daf57-7873-4f59-b36b-557ce89e6610",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "8d810075-d70f-4d5e-b7bb-7ec8a6bc2df4",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "8410a0ce-5ba3-4532-81db-f1b4abe871e4",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "5ddf8742-cda4-4e1f-8954-db1483215d12",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "da17c0dd-1f9b-4bd2-87c5-07f90bd57561",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryDory",
+        "id" : "5cb28f90-05d0-4b74-871a-d005f1140e1e",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "13365a2f-c9bf-48d1-a538-37522ff58cdb",
+      "regionName" : "sidePane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryHeader",
+        "id" : "08ad815e-8437-48f2-bdfc-08777fa05a1a",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "e68183e7-46ca-46d4-8465-b647787de55a",
+      "regionName" : "topPane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryHelp",
+        "id" : "62db2972-c9a9-4395-89c6-79c752f47680",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "082ea375-6314-4fad-a92a-c9e8e11e4b65",
+      "regionName" : "mainTextArea",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-family: georgia;\">© Copyright 2021, Dale Wang</span></p>"
+        },
+        "componentName" : "forceCommunity:richTextInline",
+        "id" : "5ceed68f-86f8-4bc4-b7f0-3edbf4e83804",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "033af779-3c9b-4df9-aa80-8dc1dffd8c67",
+      "regionName" : "bottomPane",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "c:diarydoryThemeLayout",
+    "id" : "cc088f9b-c8e4-4805-8888-da616c6f5837",
+    "label" : "Login Register",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "f7b4202d-13c7-492b-a1b2-19f7d3a0c5a0",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "6a8852fa-cb00-4f18-afc9-bcc228c661e1",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "ed7fceee-cdce-4041-9d82-a0d611684bd6",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "db1be691-caaa-4d51-8a3c-c77038ce7149",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "0dad001b-0ecf-4f3d-acda-e6441c3ccdfb",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "ab4a431c-0fc1-4504-aabe-3b0936e7ec1a",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryDory",
+        "id" : "2b660b53-39db-4841-af7f-2f9a4f84eacf",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "33b9a62a-6c48-4877-a9e1-64419dd31c1e",
+      "regionName" : "sidePane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryHeader",
+        "id" : "54fb35e4-1095-48f7-8524-664ba45db1bf",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "5694ecc9-f752-4f1c-b111-b7bb70029f8d",
+      "regionName" : "topPane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "confirmPasswordLabel" : "Confirm Password",
+          "emailLabel" : "Email",
+          "extraFieldsFieldSet" : "",
+          "firstnameLabel" : "First Name",
+          "includePasswordField" : false,
+          "lastnameLabel" : "Last Name",
+          "passwordLabel" : "Create Password",
+          "regConfirmUrl" : "./CheckPasswordResetEmail",
+          "startUrl" : "",
+          "submitButtonLabel" : "Sign Up"
+        },
+        "componentName" : "salesforceIdentity:selfRegister2",
+        "id" : "b8cdd70f-d228-4953-a30c-67305cde4c71",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "bb75086c-fa2a-4183-8b4f-d5cc24e26812",
+      "regionName" : "mainTextArea",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-family: georgia;\"><span class=\"ql-cursor\">﻿</span>© Copyright 2021, Dale Wang</span></p>"
+        },
+        "componentName" : "forceCommunity:richTextInline",
+        "id" : "f86bc950-35c5-4ff6-a07e-1c28e3adb1c5",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "48ea5a4a-6b3f-41e0-8494-69159b7edb74",
+      "regionName" : "bottomPane",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "c:diarydoryThemeLayout",
+    "id" : "34dd80e6-c412-4480-afad-58e1c6c408eb",
+    "label" : "Login Check Password",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "df0d1195-020c-44bf-9a9b-6a5cd3f4f5da",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "c02f8643-a53c-4560-a204-58b3a719bfc6",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "e0d409d8-22c3-4345-b879-f0d7d1e7e2cd",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "e200ec3d-b0da-4dd9-ac98-071680cf5656",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "7426060c-e586-47bf-acc0-7c60d1ec34ac",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "279661b2-b1da-4a68-8773-c09f9c60abf1",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryDory",
+        "id" : "27726b5f-3716-42bf-93cc-7743d28a9719",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "4dd09b2e-f2e8-4920-b444-8ee614475e60",
+      "regionName" : "sidePane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryHeader",
+        "id" : "25608b03-90ec-4dbe-a7c5-bc4fcfc84e90",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "28d09f8d-fa2c-463e-8979-ec5d3b936a55",
+      "regionName" : "topPane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 16px; color: rgb(0, 102, 204);\">﻿NOW, CHECK YOUR EMAIL</span></p>"
+        },
+        "componentName" : "forceCommunity:richTextInline",
+        "id" : "4bf94f8c-a8f7-4c8a-aae2-8bea88687ef8",
+        "renditionMap" : { },
+        "type" : "component"
+      }, {
+        "componentAttributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><span style=\"font-size: 16px; color: rgb(0, 0, 0);\">Check the email account associated with your user name for instructions on resetting your password. Remember to look in your spam folder, where automated messages sometimes filter. If you still can't log in, contact your administrator.</span></p>"
+        },
+        "componentName" : "forceCommunity:richTextInline",
+        "id" : "20a01930-9077-4148-846e-c577368358bd",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "f01ed8a0-9ea7-4537-87b1-804c0844dd5e",
+      "regionName" : "mainTextArea",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-family: georgia;\">﻿© Copyright 2021, Dale Wang</span></p>"
+        },
+        "componentName" : "forceCommunity:richTextInline",
+        "id" : "ecbe857f-2c83-45cb-af2e-f0d83f331543",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "5ade9312-59d6-4e2f-b8c0-dfcc145bba06",
+      "regionName" : "bottomPane",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  }, {
+    "componentAttributes" : { },
+    "componentName" : "c:diarydoryThemeLayout",
+    "id" : "610cda7f-18ce-40e0-98f2-8c9f60e1b316",
+    "label" : "Login Forgot Password",
+    "regions" : [ {
+      "components" : [ {
+        "componentAttributes" : {
+          "maxAutoCompleteResults" : 5,
+          "searchLabel" : "Search...",
+          "searchObjects" : [ {
+            "isPublic" : true,
+            "name" : "Account"
+          } ]
+        },
+        "componentName" : "forceCommunity:globalSearchInput",
+        "id" : "2b9313e0-a2c6-4f1f-a06a-218951cec4e4",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "6754c562-e034-4df2-b92f-be181babbb51",
+      "regionName" : "search",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "accountManagementLabel" : "Account Management",
+          "communityBuilderLabel" : "Experience Builder",
+          "communitySetupLabel" : "Salesforce Setup",
+          "contactSupportLabel" : "Contact Support",
+          "filterName" : "MyCases",
+          "homeLabel" : "Home",
+          "includeContactSupport" : true,
+          "includeMessages" : false,
+          "loginLabel" : "Login",
+          "logoutLabel" : "Logout",
+          "myAccountLabel" : "My Account",
+          "showAccountManagement" : true,
+          "showUserSettings" : true,
+          "userSettingsLabel" : "My Settings",
+          "viewProfileLabel" : "My Profile"
+        },
+        "componentName" : "selfService:userProfileMenu",
+        "id" : "8dc57328-6841-4aa6-a0dd-cc65653cfce5",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "ed571c1d-799c-493d-8ee6-1a0b8d179858",
+      "regionName" : "profileMenu",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "NavigationMenuEditorRefresh" : "",
+          "hideAppLauncher" : true,
+          "hideHomeText" : true
+        },
+        "componentName" : "forceCommunity:globalNavigation",
+        "id" : "7c94ecf3-0439-4391-90c6-26b68c288855",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "d4bd7202-94b8-41a2-a53b-120231433490",
+      "regionName" : "navBar",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryDory",
+        "id" : "6baeb702-78bc-4461-bb7c-e86e5f9d361e",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "50188b82-b3b4-4e12-a409-b01d480e20ac",
+      "regionName" : "sidePane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : { },
+        "componentName" : "c:diaryEntryHeader",
+        "id" : "cffc0b0d-dd64-4ce0-a5bb-4b0399c653fd",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "9bcf142d-c7a4-42bb-9f57-e79e1887fa03",
+      "regionName" : "topPane",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "checkEmailUrl" : "./CheckPasswordResetEmail",
+          "submitButtonLabel" : "Reset Password",
+          "usernameLabel" : "Username"
+        },
+        "componentName" : "salesforceIdentity:forgotPassword2",
+        "id" : "9dee11b4-7468-4d42-b64c-8b93f4f6e9cc",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "1be4f496-0ea8-4994-befe-7552431fe49d",
+      "regionName" : "mainTextArea",
+      "type" : "region"
+    }, {
+      "components" : [ {
+        "componentAttributes" : {
+          "richTextValue" : "<p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"font-family: georgia;\"><span class=\"ql-cursor\">﻿</span>© Copyright 2021, Dale Wang</span></p>"
+        },
+        "componentName" : "forceCommunity:richTextInline",
+        "id" : "fb250652-d72b-43a5-b17d-7b0070a67afe",
+        "renditionMap" : { },
+        "type" : "component"
+      } ],
+      "id" : "0aa3fc83-6d7a-4765-adda-30b249349046",
+      "regionName" : "bottomPane",
+      "type" : "region"
+    } ],
+    "type" : "view"
+  } ]
+}

@@ -1,0 +1,37 @@
+{
+  "appPageId" : "0aa49ee0-e90c-4759-94c6-dac9f38bfc8a",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "7301bc44-82cf-4b2a-87a3-e3909a62880a",
+  "label" : "Help",
+  "regions" : [ {
+    "id" : "3245960b-cfdb-45e8-9e09-fe6bdebc336b",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "1bf8567c-14b2-437a-8898-554876d93799",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "3f8fedf1-5f30-45f9-904a-f5fbafb1c676",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "customHeadTags" : "",
+        "description" : "",
+        "title" : "Help"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "2c0b734f-d152-4a3c-9717-7497d7d5cbf6",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a9ca68d7-4739-4065-83b8-1388624d5447",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "74oN3mZtPaQR7wzLhnBOdVLwOZ4cZD",
+  "type" : "view",
+  "viewType" : "custom-help"
+}

@@ -1,0 +1,18 @@
+{
+  "forgotPasswordRouteId" : "acbea33d-5930-41ee-b8ea-92a965e0ac0e",
+  "isAvailableToGuests" : true,
+  "isFilteredComponentsView" : false,
+  "isProgressiveRenderingEnabled" : false,
+  "loginAppPageId" : "87831586-554b-4e49-8a81-6c61442793ed",
+  "mainAppPageId" : "0aa49ee0-e90c-4759-94c6-dac9f38bfc8a",
+  "preferredDomain" : "none",
+  "selfRegistrationRouteId" : "d7169b9e-852d-4100-8193-b6ebf8e5e84e",
+  "trustedSitesForScript" : [ {
+    "id" : "4434c6df-0988-403f-be13-aab656f5ccba",
+    "isActive" : true,
+    "trustedSiteName" : "CurrentVisualForceSite",
+    "trustedSiteUrl" : "https://australiacom-dev-ed--c.visualforce.com/",
+    "type" : "trustedSitesForScripts"
+  } ],
+  "type" : "site"
+}
