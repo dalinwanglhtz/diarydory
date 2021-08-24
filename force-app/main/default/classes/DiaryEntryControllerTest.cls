@@ -85,4 +85,14 @@ public with sharing class DiaryEntryControllerTest {
 
         System.assert(errorMsg.startsWith('List has no rows for assignment'), 'Exception should be thrown');
     }
+
+    @isTest static void testGetNumUsedLicense(){
+        String numUsed;
+
+        Test.startTest();
+        numUsed = DiaryEntryController.getNumberOfUsedLicenses();
+        Test.stopTest();
+
+        System.assert(numUsed != null, 'Number of used license should not be null');
+    }
 }

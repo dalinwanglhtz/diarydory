@@ -3,12 +3,14 @@ import { NavigationMixin } from 'lightning/navigation';
 import USER_ID from '@salesforce/user/Id';
 import { getRecord } from 'lightning/uiRecordApi';
 import NAME_FIELD from '@salesforce/schema/User.Name';
+import getNumLicenses from '@salesforce/apex/DiaryEntryController.getNumberOfUsedLicenses';
 
 export default class DiaryEntrySession extends NavigationMixin(LightningElement) {
     loggedOut = true;
     @track currUserName;
     @track error;
     userId = USER_ID;
+    numLicenses;
 
     @wire(getRecord, {
         recordId: USER_ID,
@@ -35,5 +37,15 @@ export default class DiaryEntrySession extends NavigationMixin(LightningElement)
     handleLogout(event) {
         this.loggedOut = true;
         window.location.replace('https://spinosaurus-developer-edition.ap24.force.com/diaryDory/secur/logout.jsp');
+    }
+
+    connectedCallback() {
+        getNumLicenses()
+        .then(result => {
+            this.numLicenses = result;
+        })
+        .catch(err => {
+            console.log('Error: ', err.body.message);
+        });
     }
 }

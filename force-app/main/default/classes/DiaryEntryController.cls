@@ -1,4 +1,4 @@
-public class DiaryEntryController {
+public without sharing class DiaryEntryController {
 
     @AuraEnabled
     public static void saveDiaryEntry(String entryData, Id entryId) {
@@ -41,5 +41,25 @@ public class DiaryEntryController {
         } catch (Exception e) {
             throw new AuraHandledException(e.getMessage());
         }
+    }
+
+    @AuraEnabled
+    public static String getNumberOfUsedLicenses(){
+        Integer numUsers;
+        Integer totalLicense;
+        try {
+            List<User> users = [SELECT Id
+                                FROM User 
+                                WHERE Profile.UserLicense.Name = 'External Apps Login'];
+            totalLicense = [SELECT TotalLicenses 
+                            FROM UserLicense 
+                            WHERE Name = 'External Apps Login'
+                            LIMIT 1][0].TotalLicenses;
+            numUsers = users.size();
+        } catch (Exception e) {
+            throw new AuraHandledException(e.getMessage());
+        }
+
+        return (totalLicense - numUsers) + '/' + totalLicense;
     }
 }
