@@ -4,4 +4,9 @@
             <img src={doryPic}>
         </div>
     </template>
+    <template if:true={loggedIn}>
+        <div class="slds-m-top_medium">
+            <img src={doryPic} style="width: 250px; height: 150px;">
+        </div>
+    </template>
 </template>
